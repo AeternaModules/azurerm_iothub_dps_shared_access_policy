@@ -1,5 +1,5 @@
-resource "azurerm_iothub_dps_shared_access_policy" "iothub_dps_shared_access_policys" {
-  for_each = var.iothub_dps_shared_access_policys
+resource "azurerm_iothub_dps_shared_access_policy" "iothub_dps_shared_access_policies" {
+  for_each = var.iothub_dps_shared_access_policies
 
   iothub_dps_name     = each.value.iothub_dps_name
   name                = each.value.name
