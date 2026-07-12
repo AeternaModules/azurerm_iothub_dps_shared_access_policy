@@ -1,3 +1,7 @@
+output "iothub_dps_shared_access_policies_id" {
+  description = "Map of id values across all iothub_dps_shared_access_policies, keyed the same as var.iothub_dps_shared_access_policies"
+  value       = { for k, v in azurerm_iothub_dps_shared_access_policy.iothub_dps_shared_access_policies : k => v.id }
+}
 output "iothub_dps_shared_access_policies_enrollment_read" {
   description = "Map of enrollment_read values across all iothub_dps_shared_access_policies, keyed the same as var.iothub_dps_shared_access_policies"
   value       = { for k, v in azurerm_iothub_dps_shared_access_policy.iothub_dps_shared_access_policies : k => v.enrollment_read }
