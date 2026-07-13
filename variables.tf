@@ -17,11 +17,11 @@ EOT
     iothub_dps_name     = string
     name                = string
     resource_group_name = string
-    enrollment_read     = optional(bool) # Default: false
-    enrollment_write    = optional(bool) # Default: false
-    registration_read   = optional(bool) # Default: false
-    registration_write  = optional(bool) # Default: false
-    service_config      = optional(bool) # Default: false
+    enrollment_read     = optional(bool)
+    enrollment_write    = optional(bool)
+    registration_read   = optional(bool)
+    registration_write  = optional(bool)
+    service_config      = optional(bool)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_iothub_dps_shared_access_policy's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
